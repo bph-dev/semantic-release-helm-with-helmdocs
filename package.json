@@ -1,13 +1,13 @@
 {
-  "name": "semantic-release-helm",
-  "version": "2.2.0",
-  "description": "semantic-release plugin to update version and appVersion in a Helm chart",
+  "name": "semantic-release-helm-with-helmdocs",
+  "version": "srh-2.2.0_helmdocs-1.11.0",
+  "description": "semantic-release plugin to update version and app version and generate documentation in a Helm chart",
   "main": "index.js",
   "files": [
     "index.js",
     "lib/**/*.js"
   ],
-  "repository": "https://github.com/m1pl/semantic-release-helm.git",
+  "repository": "https://github.com/bph-dev/semantic-release-helm-with-helmdocs",
   "author": "Mihai Plasoianu <mihai@plasoianu.de>",
   "license": "MIT",
   "dependencies": {
