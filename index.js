@@ -11,8 +11,8 @@ let prepared = false;
 async function verifyConditions(pluginConfig, context) {
 	await verifyChart(pluginConfig, context);
 	
-	verifiedInstallation = verifyHelmDocsInstallation(pluginConfig, context); 
-    verified = true;
+  verifiedInstallation = verifyHelmDocsInstallation(pluginConfig, context); 
+  verified = true;
 }
 
 async function prepare(pluginConfig, context) {
