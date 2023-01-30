@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-helm-with-helmdocs",
-  "version": "2.2.0-helmdocs-1.11.0-alpha-0.1.7",
+  "version": "2.2.0-helmdocs-1.11.0-alpha-0.1.8",
   "description": "semantic-release plugin to update version and app version and generate documentation in a Helm chart. semantic-release-helm-with-helmdocs plugin was forked from verison 2.2.0 of semantic-release-helm and the version of Helm-Docs that was tested within the development of semantic-release-helm-with-helmdocs was 1.11.0",
   "type": "module",
   "main": "index.js",
