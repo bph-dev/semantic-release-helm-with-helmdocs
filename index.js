@@ -1,5 +1,5 @@
 import verifyChart from './lib/verifyConditions.js';
-import verifyHelmDocsInstallation from './lib/verifyHelmDocInstallation.js';
+import verifyHelmDocsInstallation from './lib/verifyHelmDocsInstallation.js';
 import prepareChart from './lib/prepare.js';
 import prepareHelmChartDocumentation from   './lib/render.js';
 import publishChart from './lib/publish.js';
@@ -11,7 +11,7 @@ let prepared = false;
 async function verifyConditions(pluginConfig, context) {
 	await verifyChart(pluginConfig, context);
 	
-	verifiedInstallation = verifyHelmDocInstallation(pluginConfig, context); 
+	verifiedInstallation = verifyHelmDocsInstallation(pluginConfig, context); 
     verified = true;
 }
 
