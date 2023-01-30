@@ -18,28 +18,28 @@ async function verifyConditions(pluginConfig, context) {
 async function prepare(pluginConfig, context) {
 	const logger = context.logger;
 
-    if (!verified) {
-        await verifyConditions(pluginConfig, context);
-    }
+  if (!verified) {
+    await verifyConditions(pluginConfig, context);
+  }
 
-    await prepareChart(pluginConfig, context);		
+  await prepareChart(pluginConfig, context);		
 	
 	if (verifiedInstallation) {
 		await prepareHelmChartDocumentation(pluginConfig, context);
 	}
 
-    prepared = true;
+  prepared = true;
 }
 
 async function publish(pluginConfig, context) {
-    if (!verified) {
-        await verifyConditions(pluginConfig, context);
-    }
-    if (!prepared) {
-        await prepare(pluginConfig, context);
-    }
+  if (!verified) {
+    await verifyConditions(pluginConfig, context);
+  }
+  if (!prepared) {
+    await prepare(pluginConfig, context);
+  }
 
-    await publishChart(pluginConfig, context);
+  await publishChart(pluginConfig, context);
 }
 
 export default {verifyConditions, prepare, publish};
