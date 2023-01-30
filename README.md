@@ -88,7 +88,7 @@ _Chart.yaml_.
 {
   "plugins": [
     [
-      "semantic-release-helm",
+      "semantic-release-helm-with-helmdocs@2.2.0-helmdocs-1.11.0-alpha-0.1.1.",
       {
         chartPath: './chart',
         registry: 'localhost:5000/repo/chart',
