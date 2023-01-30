@@ -54,6 +54,15 @@ appVersion 1.16.0
 - crConfigPath (optional) - string  
   Path to .ct.yaml chart-releaser configuration file.
 
+- prepareHelmChartDocs (optional) - boolean (default: false)
+  Enable Helm Docs to render the Helm Chart documentation   
+  
+- readmeTemplatePath (optional) - string
+  Path to read the .gotmpl template file for customizing the look of the README.md file
+
+- readmeFilePath (optional) - string 
+  Path to write the README.md file.
+
 Pass credentials through environment variables accordingly:
 
 ```
@@ -71,7 +80,7 @@ export AWS_SECRET_ACCESS_KEY=<SECRET_ACCESS_KEY>
 
 ## Example
 
-This will update `version` and `appVersion` in `./chart/Chart.yaml`
+This will update `version` and `appVersion` in `./chart/Chart.yaml` in addition to generate the helm-chart README.md file at the `./` location.
 and push the chart to `localhost:5000/repo/chart`. The image will be tagged with the value of `version` from
 _Chart.yaml_.
 
@@ -82,7 +91,10 @@ _Chart.yaml_.
       "semantic-release-helm",
       {
         chartPath: './chart',
-        registry: 'localhost:5000/repo/chart'
+        registry: 'localhost:5000/repo/chart',
+		prepareHelmChartDocs: true,
+		readmeTemplatePath: './',
+		readmeFilePath: './'
       }
     ]
   ]
