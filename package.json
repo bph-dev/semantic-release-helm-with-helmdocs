@@ -3,10 +3,12 @@
   "version": "2.2.0-helmdocs-1.11.0-alpha-0.1.8",
   "description": "semantic-release plugin to update version and app version and generate documentation in a Helm chart. semantic-release-helm-with-helmdocs plugin was forked from verison 2.2.0 of semantic-release-helm and the version of Helm-Docs that was tested within the development of semantic-release-helm-with-helmdocs was 1.11.0",
   "type": "module",
-  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "files": [
     "index.js",
-    "lib/**/*.js"
+    "lib"
   ],
   "repository": "https://github.com/bph-dev/semantic-release-helm-with-helmdocs",
   "author": "Mihai Plasoianu <mihai@plasoianu.de>",
@@ -14,11 +16,16 @@
   "dependencies": {
     "aggregate-error": "^3.1.0",
     "execa": "^5.0.0",
+    "figures": "^5.0.0",
     "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
     "path": "^0.12.7",
-    "semver": "^7.3.4"
+    "semver": "^7.3.4",
+    "signale": "^1.4.0"
   },
   "devDependencies": {
-    "jasmine": "^4.5.0"
+    "@types/chai": "^4.3.4",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
   }
 }
