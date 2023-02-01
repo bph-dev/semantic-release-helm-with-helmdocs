@@ -28,7 +28,7 @@ async function verifyConditions(pluginConfig, context) {
 }
 
 async function prepare(pluginConfig, context) {
-	const logger = context.logger;
+  const logger = context.logger;
 
   if (!verified) {
   	await verifyConditions(pluginConfig, context);
