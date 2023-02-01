@@ -31,7 +31,7 @@ async function prepare(pluginConfig, context) {
 	const logger = context.logger;
 
   if (!verified) {
-    await verifyConditions(pluginConfig, context);
+  	await verifyConditions(pluginConfig, context);
   }
 
   await prepareChart(pluginConfig, context);
