@@ -12,8 +12,8 @@ let prepared = false;
 
 async function verifyConditions(pluginConfig, context) {
   const logger = context.logger;
-
-	await verifyChart(pluginConfig, context);
+	
+  await verifyChart(pluginConfig, context);
 
   if (!isNil(pluginConfig.prepareHelmChartDocs) || !isEmpty(pluginConfig.prepareHelmChartDocs)) {
     if (isBoolean(pluginConfig.prepareHelmChartDocs)) {
